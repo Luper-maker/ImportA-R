@@ -430,21 +430,42 @@ display: grid;
 }
 /* TERMINA SECCION MODAL CONTACTO */
 
+.promociones{
+    text-align: center;
+    font-weight: bold;
+}
+
 .ofertaimg{
     background-color: #6b1812;
-    margin: auto;
-    margin-top: 15px;
-    height: 400px;
-    width: 700px;
+    display: grid;
+    height: 500px;
+    width: 100%;
     position: relative;
     border: solid, 1px, #000;
 }
 
 .ofertaimg__img{
     position: absolute;
-    top: 10px;
-    width: 700px;
+    border-radius: 12px;
+    margin-left: 50px;
+    top: 15px;
+    width: 600px;
     height: 400px;
-    right: 20px;
     border: solid 1px #000;
+}
+
+.ofertaimg__img:hover{
+    transform: translateY(-5px);
+
+}
+
+.img--img{
+    left: 690px;
+    width: 500px;
+    height: 400px;
+    border-radius: 12px;
+}
+
+.img--img:hover{
+    transform: translateY(-5px);
 }
