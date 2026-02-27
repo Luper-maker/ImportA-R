@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>ImportAR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--=====================================================HEADER-->
+<header class="header">
+    <div class="logo">Import<span class="a">A</span><span class="guion">-</span><span class="r">R</span></div>
+
+    <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#" id="btncontact">Contacto</a>
+    </nav>
+
+<!--========================================== SECCIÓN CARRITO -->
+<section class="carrito">
+
+    <button class="btn-carrito" onclick="abrirCarrito()">🛒 Carrito (<span id="contadorCarrito">0</span>)</button>
+
+    <div class="carrito-lateral" id="carritoLateral">
+    <div class="carrito-header">
+        <h2>Tu Carrito</h2>
+        <span onclick="cerrarCarrito()" class="cerrar-carrito">&times;</span>
+    </div>
+
+    <div id="listaCarrito" class="carrito-items"></div>
+
+    <div class="carrito-footer">
+        <h3>Total: $<span id="total">0</span></h3>
+        <button onclick="enviarWhatsApp()">Finalizar pedido</button>
+    </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="cerrarCarrito()"></div>
+</section>
+</header>
+
+<!--================================================SECCION HERO-->
+<section id="inicio" class="hero">
+    <div class="hero-images">
+        <img src="/img/LentesClaros_Galeria.png" class="hero-img active">
+        <img src="/img/Relojdeputo_galeria.png" class="hero-img">
+        <img src="/img/LentesOscuros_galeria.png" class="hero-img">
+        <img src="/img/Relojnegro_galeria.png" class="hero-img">
+        <img src="/img/Relojdeputo2_galeria.png" class="hero-img">
+        <img src="/img/RelojPlata_galeria.png" class="hero-img">
+    </div>
+
+
+    <div class="hero-text">
+        <h1>En ImportAR somos pioneros en el mercado de ocasión de relojes de lujo.</h1>
+        <p>Con más de 20 años de experiencia... </p>
+        <a href="#catalogo" class="btn_ver_relojes">Ver Productos</a>
+    </div>
+</section>
+
+<!-- IMAGEN PROMO EMPRENDEDORES-->
+<div class="ofertaimg">
+    <img src="img/promo emprendedores.jpeg" class="ofertaimg__img">
+</div>
+
+<!--================================================ CATÁLOGO -->
+<section class="catalogo" id="catalogo">
+    <h2>PROMO EMPRENDEDORES</h2>
+
+    <div class="producto">
+        <img src="img/RelojPlata_PlataNegro.png" alt="Reloj deportivo">
+        <h3>Relojes</h3>
+        <button onclick="abrirModal()">Ver más modelos</button>
+    </div>
+<!--=========================SECCION DEL MODAL DE RELOJES EN CATALOGO-->
+<div class="modal" id="modalRelojes">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2>Modelos disponibles</h2>
+
+        <div class="modelos-grid">
+
+            <div class="modelo">
+                <img src="img/RelojPlata_BlancoPlata.png">
+                <h4>Reloj Plata Fondo Blanco</h4>
+                <p>$30.000</p>
+                <button onclick="agregarAlCarrito('Reloj Plata Fondo Blanco', 30.000, 'img/RelojPlata_BlancoPlata.png')">Agregar</button>
+            </div>
+
+            <div class="modelo">
+                <img src="img/RelojPlata_PlataNegro.png">
+                <h4>Reloj plata Fondo Negro</h4>
+                <p>$30.000</p>
+                <button onclick="agregarAlCarrito('Reloj Plata Fondo negro',30.000, 'img/RelojPlata_PlataNegro.png')">Agregar</button>
+            </div>
+
+            <div class="modelo">
+                <img src="img/RelojNegro_NegroPlata.png">
+                <h4>Reloj Negro fondo Negro c/Plata</h4>
+                <p>$30.000</p>
+                <button onclick="agregarAlCarrito('Reloj Negro Fondo Negro c/plata', 30.000, 'img/RelojNegro_NegroPlata.png')">Agregar</button>
+            </div>
+
+            <div class="modelo">
+                <img src="img/RelojNegro_OroNegro.png">
+                <h4>Reloj Negro Fondo Negro c/Oro</h4>
+                <p>$30.000</p>
+                <button onclick="agregarAlCarrito('Reloj Negro Fondo Negro c/Oro', 30.000, 'img/RelojNegro_OroNegro.png')">Agregar</button>
+            </div>
+
+            <div class="modelo">
+                <img src="img/Reloj_MultiNegro.png">
+                <h4>Reloj Multi Fondo Negro</h4>
+                <p>$30.000</p>
+                <button onclick="agregarAlCarrito('Reloj Multi Fondo Negro', 30.000, 'img/Reloj_MultiNegro.png')">Agregar</button>
+            </div>
+
+            <div class="modelo">
+                <img src="img/RelojDorado_OroNegro.png">
+                <h4>Reloj Dorado Fondo Negro</h4>
+                <p>$30.000</p>
+                <button onclick="agregarAlCarrito('Reloj Dorado Fondo Negro', 30.000, 'img/RelojDorado_OroNegro.png')">Agregar</button>
+            </div>
+
+            <div class="modelo">
+                <img src="img/Relojdeputo2_galeria.png">
+                <h4>Reloj de cuero Marron</h4>
+                <p>$25.000</p>
+                <button onclick="agregarAlCarrito('Reloj Cuero Marron', 25000, 'img/Relojdeputo2_galeria.png')">Agregar</button>
+            </div>
+
+            <div class="modelo">
+                <img src="img/Relojdeputo_galeria.png">
+                <h4>Reloj Cuero Negro fondo blanco</h4>
+                <p>$25.000</p>
+                <button onclick="agregarAlCarrito('Reloj Negro Fondo Blanco', 25000, 'img/Relojdeputo_galeria.png')">Agregar</button>
+            </div>
+
+            <div class="modelo">
+                <img src="img/reloj cuero fondo negro roma.png">
+                <h4>Reloj Cuero Negro fondo negro Roma</h4>
+                <p>$25.000</p>
+                <button onclick="agregarAlCarrito('Reloj cuero negro fondo negro Roma', 25000, 'img/Reloj cuero fondo negro roma.png')">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</section>
+
+<!--=========================================SECCION CONTACTO-->
+<section id="contacto" class="contacto">
+    <div id="modalContacto" class="modal">
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>Contacto</h2>
+        <h1>Te resolvemos tus dudas</h1>
+        <p class="sub">
+            Escríbenos y te respondemos lo antes posible
+        </p>
+
+        <form class="contact-form">
+            <div class="row">
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Email" required>
+            </div>
+
+            <input type="text" placeholder="Asunto del mensaje" required>
+
+            <textarea placeholder="Dinos en qué te podemos ayudar" required></textarea>
+
+            <button type="submit" class="btn-enviar">
+                Enviar mensaje
+            </button>
+        </form>
+
+        </div>
+    </div>
+        <script>
+            const btnContacto = document.getElementById("btncontact");
+            const modal = document.getElementById("modalContacto");
+            const closeBtn = document.querySelector(".close");
+
+            btnContacto.addEventListener("click", () => {
+    modal.style.display = "flex";
+});
+
+            closeBtn.addEventListener("click", () => {
+            modal.style.display = "none";
+            });
+
+            window.addEventListener("click", e => {
+    if (e.target === modal) {
+        modal.style.display = "none";
+    }
+});
+        </script>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
