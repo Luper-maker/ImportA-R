@@ -91,7 +91,7 @@ function cerrarCarrito() {
 }
 
 function enviarWhatsApp() {
-    let mensaje = "Hola JuanKarloh, como ta chupapija. te quiero pedir:%0A";
+    let mensaje = "Buen día! adjunto mi carrito para la compra:%0A";
 
     carrito.forEach(p => {
         mensaje += `${p.nombre} x${p.cantidad} - $${p.precio * p.cantidad}%0A`;
